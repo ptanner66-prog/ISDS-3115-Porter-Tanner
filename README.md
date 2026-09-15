@@ -16,7 +16,7 @@ This repository contains the coursework for the Generative AI portion of ISDS 31
 ---
 
 ## Project 1: Website Design & GitHub Hosting
-**Location:** [`website-design-and-github-hosting/`](./website-design-and-github-hosting/)
+**Location:** [`website-design-and-github-hosting/porter-website/`](./website-design-and-github-hosting/porter-website/)
 
 This project consists of creating a personal website using **Google's Antigravity IDE** in a pair-programming (Driver/Navigator) vibe coding modality. 
 * **Requirements:** 
