@@ -5,7 +5,8 @@ SDEIS DEPARTMENT
 Baton Rouge, LA 70803
 
 **Instructor:** Gabriele Piccoli, Ph.D.
-**Email:** gpiccoli@lsu.edu
+**Student**Porter Tanner
+**Email:** ptanne6@lsu.edu
 
 ---
 
