@@ -418,14 +418,12 @@ section + section {
     top: 0;
 }
 
-/* Wider badge so the Motion Granted wordmark is legible; stays centered on the line */
-.timeline-dot.is-mg {
-    width: 68px;
-    left: -12px;
-    padding: 2px 4px;
+/* Let the Motion Granted wordmark fill its square badge */
+.company-logo.is-mg {
+    padding: 2px;
 }
 
-.timeline-dot.is-mg img {
+.company-logo.is-mg img {
     width: 100%;
     height: auto;
 }
@@ -636,13 +634,13 @@ section + section {
 
 .company-logo.is-lsu {
     background: #461d7c;
-    border-color: #fdd023;
+    border-color: #461d7c;
     color: #fdd023;
     font-weight: 600;
 }
 
 .company-logo.is-mg {
-    background: var(--accent-deep);
+    background: #16253c;
     border-color: #2c4273;
 }
 
@@ -700,11 +698,6 @@ footer {
     .timeline-item,
     .timeline-cta {
         padding-left: 3.75rem;
-    }
-
-    .timeline-dot.is-mg {
-        width: 58px;
-        left: -7px;
     }
 
     .skills-card {
