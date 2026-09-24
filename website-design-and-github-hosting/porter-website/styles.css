@@ -484,6 +484,12 @@ section + section {
     font-weight: 500;
 }
 
+.email-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
 .timeline-cta {
     margin-top: 3rem;
     padding-left: 4.5rem;

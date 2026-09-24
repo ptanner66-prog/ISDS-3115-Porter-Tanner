@@ -109,8 +109,9 @@
                 </dl>
             </div>
 
-            <div class="timeline-cta">
+            <div class="timeline-cta email-actions">
                 <a href="mailto:ptanne6@lsu.edu" class="btn btn-primary">Contact for Opportunities</a>
+                <button type="button" class="btn copy-email" data-email="ptanne6@lsu.edu">Copy ptanne6@lsu.edu</button>
             </div>
         </div>
     </main>
@@ -118,5 +119,21 @@
     <footer>
         <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
+    <script>
+        // Copy-email fallback for visitors without a default mail app
+        document.querySelectorAll('.copy-email').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var email = btn.dataset.email, label = btn.textContent;
+                function done() { btn.textContent = 'Copied ✓'; setTimeout(function () { btn.textContent = label; }, 2000); }
+                function fallback() {
+                    var t = document.createElement('textarea'); t.value = email; document.body.appendChild(t);
+                    t.select(); try { document.execCommand('copy'); done(); } catch (e) { window.prompt('Copy this email:', email); }
+                    document.body.removeChild(t);
+                }
+                if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(email).then(done, fallback);
+                else fallback();
+            });
+        });
+    </script>
 </body>
 </html>
