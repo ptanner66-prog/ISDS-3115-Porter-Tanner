@@ -8,6 +8,8 @@
     --text-muted: #5c5c5c;
     --rule: #1f1f1f;
     --rule-strong: #3a3a3a;
+    --accent: #5cc4ff;
+    --accent-deep: #16264a;
     --border-color: var(--rule);
     --glass-bg: var(--bg-secondary);
     --glass-border: var(--rule);
@@ -46,7 +48,7 @@ a {
 }
 
 ::selection {
-    background: var(--text-primary);
+    background: var(--accent);
     color: var(--bg-main);
 }
 
@@ -62,7 +64,7 @@ a {
     letter-spacing: -0.04em;
     color: var(--text-primary);
     text-decoration: underline;
-    text-decoration-color: var(--rule-strong);
+    text-decoration-color: var(--accent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
 }
@@ -150,7 +152,7 @@ a {
 
 .nav-links a.active {
     text-decoration: underline;
-    text-decoration-color: var(--rule-strong);
+    text-decoration-color: var(--accent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.4em;
 }
@@ -176,13 +178,13 @@ section + section {
 .hero-section {
     min-height: calc(80vh - 64px);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 3.5rem;
 }
 
 .hero-section h1 {
-    font-size: 3.25rem;
+    font-size: clamp(2.25rem, 3.6vw, 2.75rem);
     line-height: 1.05;
     margin-bottom: 1.5rem;
 }
@@ -208,10 +210,8 @@ section + section {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    object-position: 38% 20%;
-    filter: grayscale(1) contrast(1.15) brightness(0.9);
     border: 1px solid var(--rule);
 }
 
@@ -283,7 +283,7 @@ section + section {
     display: block;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: var(--accent);
     margin-bottom: 1.25rem;
 }
 
@@ -370,6 +370,7 @@ section + section {
 }
 
 .text-link {
+    color: var(--accent);
     display: inline-block;
     margin-top: 1.25rem;
     font-family: var(--font-mono);
@@ -475,7 +476,6 @@ section + section {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: grayscale(1) brightness(1.35) contrast(1.2);
 }
 
 .panel-mono {
@@ -510,7 +510,16 @@ section + section {
 }
 
 .glass-card p a {
-    color: var(--text-primary);
+    color: var(--accent);
+}
+
+.contact-list a {
+    color: var(--accent);
+}
+
+.company-logo.is-mg {
+    background: var(--accent-deep);
+    border-color: #2c4273;
 }
 
 /* Footer */
@@ -534,7 +543,6 @@ footer {
 
     .hero-photo {
         order: -1;
-        max-width: 240px;
         margin-bottom: 2.5rem;
     }
 }
