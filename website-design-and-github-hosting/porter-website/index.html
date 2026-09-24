@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Porter Tanner's professional portfolio and personal website.">
+    <meta name="description" content="Porter Tanner, technical co-founder of Motion Granted and Economics + Information Systems student at LSU. I turn dirty data into clean, unified systems, built by directing AI coding agents.">
     <title>Porter Tanner | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='.5' y='.5' width='31' height='31' fill='none' stroke='%233a3a3a'/%3E%3Ctext x='16' y='20.5' font-family='monospace' font-size='12' fill='%23ededed' text-anchor='middle'%3EPT%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar" id="main-nav">
-        <div class="logo">Porter <span class="text-gradient">Tanner</span></div>
+        <a href="index.html" class="logo">Porter Tanner</a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
@@ -19,35 +20,117 @@
 
     <main class="container">
         <section id="profile" class="hero-section">
-            <h1 id="hero-title">Engineering the Future of <br><span class="text-gradient">Information Systems</span></h1>
-            <p>I build premium, scalable solutions that solve complex problems. Welcome to my digital workspace.</p>
-            <div style="display: flex; gap: 1rem;">
-                <a href="project.html" class="btn btn-primary">View My Work</a>
-                <a href="resume.html" class="btn" style="background: var(--glass-bg); border: 1px solid var(--border-color);">Read Resume</a>
+            <div class="hero-text">
+                <h1 id="hero-title">I turn dirty data <br><span class="text-gradient">into clean, unified systems.</span></h1>
+                <p>I build with AI coding agents. At Motion Granted, where I&rsquo;m technical co-founder, that meant turning 9M+ messy court opinions into one PostgreSQL citation database. Economics and Information Systems at LSU, class of 2028.</p>
+                <div class="hero-actions">
+                    <a href="project.html" class="btn btn-primary">View My Work</a>
+                    <a href="resume.html" class="btn">Read Resume</a>
+                </div>
             </div>
+            <figure class="hero-photo">
+                <img src="graphics/porter-mg.png" alt="Porter Tanner speaking on stage in front of a Motion Granted screen" width="1024" height="682">
+                <figcaption>Baton Rouge, LA</figcaption>
+            </figure>
         </section>
 
-        <section id="skills" style="margin-top: 4rem;">
+        <section id="skills">
             <h2 class="section-title">Core Competencies</h2>
             <div class="grid-3">
                 <div class="glass-card" id="skill-1">
-                    <h3 class="text-gradient" style="margin-bottom: 1rem;">Systems Architecture</h3>
-                    <p style="color: var(--text-secondary)">Designing robust, scalable backend systems and databases tailored for high-performance applications.</p>
+                    <span class="card-label">01</span>
+                    <h3>Data Systems</h3>
+                    <p>PostgreSQL at scale: 9M+ court opinions loaded from bulk data, citations extracted and classified, all hosted on a server I set up myself.</p>
+                    <div class="project-tags">
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Linux</span>
+                    </div>
                 </div>
                 <div class="glass-card" id="skill-2">
-                    <h3 class="text-gradient" style="margin-bottom: 1rem;">Agentic Workflows</h3>
-                    <p style="color: var(--text-secondary)">Developing complex, autonomous LLM agent pipelines using modern frameworks and adversarial protocols.</p>
+                    <span class="card-label">02</span>
+                    <h3>Agent-Directed Development</h3>
+                    <p>I build with Claude Code and Codex: write the spec, direct the agents, and test what comes back before it ships. I also run local AI models with vLLM.</p>
+                    <div class="project-tags">
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">Codex</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">Local AI (vLLM)</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Next.js</span>
+                    </div>
                 </div>
                 <div class="glass-card" id="skill-3">
-                    <h3 class="text-gradient" style="margin-bottom: 1rem;">Premium UI/UX</h3>
-                    <p style="color: var(--text-secondary)">Crafting state-of-the-art web interfaces using modern design systems, glassmorphism, and micro-animations.</p>
+                    <span class="card-label">03</span>
+                    <h3>Business &amp; Clients</h3>
+                    <p>Running my own businesses since 16. I quote, invoice, and turn an attorney co-founder's requirements into specs engineers can build.</p>
+                    <div class="project-tags">
+                        <span class="tag">Stripe billing</span>
+                        <span class="tag">Sales</span>
+                        <span class="tag">Specs</span>
+                        <span class="tag">Public speaking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience-contact">
+            <div class="grid-2">
+                <div class="glass-card" id="experience">
+                    <h2 class="section-title">Experience</h2>
+                    <ul class="exp-list">
+                        <li>
+                            <span class="company-logo is-mg" aria-hidden="true"><img src="graphics/mg-badge.png" alt="" width="32" height="9"></span>
+                            <div><strong>Motion Granted</strong><span class="meta">Technical Co-Founder · 2025 – Present</span></div>
+                        </li>
+                        <li>
+                            <span class="company-logo" aria-hidden="true"><img src="graphics/tlc-white.png" alt="" width="32" height="32"></span>
+                            <div><strong>Tanner Lawn Care</strong><span class="meta">Owner · 2022 – Present</span></div>
+                        </li>
+                        <li>
+                            <span class="company-logo" aria-hidden="true"><img src="graphics/c225-white.png" alt="" width="32" height="32"></span>
+                            <div><strong>Clean 225 Pressure Washing</strong><span class="meta">Owner · 2023 – 2025</span></div>
+                        </li>
+                    </ul>
+                    <a href="resume.html" class="text-link">Full resume →</a>
+                </div>
+                <div class="glass-card" id="contact">
+                    <h2 class="section-title">Contact</h2>
+                    <ul class="contact-list">
+                        <li><span>Email</span><a href="mailto:ptanne6@lsu.edu">ptanne6@lsu.edu</a></li>
+                        <li><span>GitHub</span><a href="https://github.com/ptanner66-prog" target="_blank" rel="noopener">github.com/ptanner66-prog</a></li>
+                        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/porter-tanner-4b8267359" target="_blank" rel="noopener">in/porter-tanner</a></li>
+                        <li><span>Location</span>Baton Rouge, LA</li>
+                    </ul>
+                    <div class="email-actions" style="margin-top: 1.5rem;">
+                        <a href="mailto:ptanne6@lsu.edu" class="btn btn-primary">Email Me</a>
+                        <button type="button" class="btn copy-email" data-email="ptanne6@lsu.edu">Copy ptanne6@lsu.edu</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Porter Tanner. Built with premium design standards.</p>
+        <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
+    <script>
+        // Copy-email fallback for visitors without a default mail app
+        document.querySelectorAll('.copy-email').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var email = btn.dataset.email, label = btn.textContent;
+                function done() { btn.textContent = 'Copied ✓'; setTimeout(function () { btn.textContent = label; }, 2000); }
+                function fallback() {
+                    var t = document.createElement('textarea'); t.value = email; document.body.appendChild(t);
+                    t.select(); try { document.execCommand('copy'); done(); } catch (e) { window.prompt('Copy this email:', email); }
+                    document.body.removeChild(t);
+                }
+                if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(email).then(done, fallback);
+                else fallback();
+            });
+        });
+    </script>
 </body>
 </html>
