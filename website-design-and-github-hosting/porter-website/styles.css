@@ -478,6 +478,30 @@ section + section {
     object-fit: contain;
 }
 
+.project-image--mg {
+    background: #16253c;
+    border-color: #2c4273;
+}
+
+.project-image--mg img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    /* trim the logo file's rough outer band so it melts into the navy panel */
+    clip-path: inset(5.5% 1.7% 7.8% 1.7%);
+}
+
+.project-image--shot {
+    padding: 0;
+    background: #111418;
+}
+
+.project-image--shot img {
+    object-fit: cover;
+    object-position: 72% 38%;
+}
+
 .panel-mono {
     font-family: var(--font-mono);
     font-size: 0.75rem;
