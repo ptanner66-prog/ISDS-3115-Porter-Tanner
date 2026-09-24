@@ -42,14 +42,16 @@
             <!-- Project 2 -->
             <div class="glass-card" id="project-2">
                 <div class="project-image project-image--shot">
-                    <img src="graphics/agentic-todo.png" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons" width="1125" height="1000">
+                    <img src="graphics/agentic-todo.png" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons" width="571" height="712">
+                    <button type="button" class="zoom-btn" data-zoom="graphics/agentic-todo.png" aria-label="Zoom screenshot">⤢ Zoom</button>
                 </div>
                 <h3>Agentic Operator To-Do List</h3>
-                <p>A regular to-do list that doubles as the inbox for AI coding agents. When an agent needs a decision, it shows up as an item, and you answer or approve it from the same list as your own tasks. Open source on <a href="https://github.com/ptanner66-prog/agentic-operator-to-do-list" target="_blank" rel="noopener">GitHub</a>.</p>
+                <p>A native Linux app that lives in the Omarchy (Arch Linux) desktop bar and doubles as the inbox for AI coding agents. When an agent needs a decision, it shows up as an item with context and a recommendation, and you approve, reject, or reply from the same list as your own tasks. Open source on <a href="https://github.com/ptanner66-prog/agentic-operator-to-do-list" target="_blank" rel="noopener">GitHub</a>.</p>
                 <div class="project-tags">
-                    <span class="tag">AI agents</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">Open source</span>
+                    <span class="tag">Linux (Omarchy)</span>
+                    <span class="tag">Python + QML</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">MCP</span>
                 </div>
             </div>
 
@@ -76,5 +78,23 @@
     <footer>
         <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <img src="" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons">
+        <button type="button" class="lightbox-close" aria-label="Close">Close ✕</button>
+    </dialog>
+
+    <script>
+        // Zoom: open project screenshots full-size in a native dialog
+        var box = document.getElementById('lightbox');
+        document.querySelectorAll('.zoom-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                box.querySelector('img').src = btn.dataset.zoom;
+                box.showModal();
+            });
+        });
+        box.querySelector('.lightbox-close').addEventListener('click', function () { box.close(); });
+        box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+    </script>
 </body>
 </html>

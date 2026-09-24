@@ -533,9 +533,68 @@ section + section {
     background: #111418;
 }
 
+.project-image--shot {
+    position: relative;
+}
+
 .project-image--shot img {
     object-fit: cover;
-    object-position: 72% 38%;
+    object-position: center top;
+}
+
+.zoom-btn {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    border: 1px solid var(--rule-strong);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.zoom-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.lightbox {
+    margin: auto;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: var(--bg-main);
+    border: 1px solid var(--rule-strong);
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox img {
+    display: block;
+    max-width: 90vw;
+    max-height: calc(90vh - 2px);
+    width: auto;
+    height: auto;
+}
+
+.lightbox-close {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    border: 1px solid var(--rule-strong);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    cursor: pointer;
 }
 
 .panel-mono {
