@@ -418,6 +418,18 @@ section + section {
     top: 0;
 }
 
+/* Wider badge so the Motion Granted wordmark is legible; stays centered on the line */
+.timeline-dot.is-mg {
+    width: 68px;
+    left: -12px;
+    padding: 2px 4px;
+}
+
+.timeline-dot.is-mg img {
+    width: 100%;
+    height: auto;
+}
+
 .timeline-date {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
@@ -688,6 +700,11 @@ footer {
     .timeline-item,
     .timeline-cta {
         padding-left: 3.75rem;
+    }
+
+    .timeline-dot.is-mg {
+        width: 58px;
+        left: -7px;
     }
 
     .skills-card {
