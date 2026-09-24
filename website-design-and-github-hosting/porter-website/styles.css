@@ -635,6 +635,13 @@ section + section {
     color: var(--accent);
 }
 
+.company-logo.is-lsu {
+    background: #461d7c;
+    border-color: #fdd023;
+    color: #fdd023;
+    font-weight: 600;
+}
+
 .company-logo.is-mg {
     background: var(--accent-deep);
     border-color: #2c4273;
