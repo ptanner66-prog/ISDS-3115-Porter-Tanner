@@ -88,6 +88,10 @@ a {
     line-height: 1;
 }
 
+.company-logo:has(img) {
+    padding: 3px;
+}
+
 .company-logo img {
     display: block;
     max-width: 100%;
