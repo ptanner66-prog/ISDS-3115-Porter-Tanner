@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Porter Tanner's professional resume.">
+    <meta name="description" content="Resume of Porter Tanner: LSU Economics and Information Systems student, technical co-founder of Motion Granted, and small-business owner.">
     <title>Resume | Porter Tanner</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='.5' y='.5' width='31' height='31' fill='none' stroke='%233a3a3a'/%3E%3Ctext x='16' y='20.5' font-family='monospace' font-size='12' fill='%23ededed' text-anchor='middle'%3EPT%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar" id="main-nav">
-        <div class="logo">Porter <span class="text-gradient">Tanner</span></div>
+        <div class="logo"><span class="company-logo" aria-hidden="true">PT</span><span class="logo-name">Porter <span class="text-gradient">Tanner</span></span></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html" class="active">Resume</a></li>
@@ -20,44 +21,73 @@
     <main class="container">
         <div class="resume-header">
             <h1 class="section-title">Professional <span class="text-gradient">Experience</span></h1>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: -1.5rem auto 4rem;">A track record of engineering premium information systems and delivering high-value technical solutions.</p>
+            <p>B.S. Economics + Information Systems &amp; Analytics · LSU · May 2028 · GPA 3.49</p>
         </div>
 
         <div class="timeline">
             <!-- Education -->
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Expected Spring 2028</div>
+                <div class="timeline-dot company-logo" aria-hidden="true">LSU</div>
+                <div class="timeline-date">Expected May 2028</div>
                 <div class="glass-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Louisiana State University</h3>
-                    <h4 class="text-gradient" style="margin-bottom: 1rem;">B.S. Information Systems</h4>
-                    <p style="color: var(--text-secondary)">Specializing in Agentic Workflow Design, Data Structures, and Premium Web Architecture.</p>
+                    <h3>Louisiana State University</h3>
+                    <h4>B.S. Economics and Information Systems &amp; Analytics · E. J. Ourso College of Business</h4>
+                    <ul>
+                        <li>Digital Services and Consulting concentration.</li>
+                        <li>GPA 3.49 (Economics 4.00). President's Honor Roll, Spring 2025. Dean's List, Fall 2025.</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Experience 1 -->
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Fall 2026 - Present</div>
+                <div class="timeline-dot company-logo" aria-hidden="true">MG</div>
+                <div class="timeline-date">2025 – Present</div>
                 <div class="glass-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Systems Engineer Intern</h3>
-                    <h4 class="text-gradient" style="margin-bottom: 1rem;">Tech Solutions Inc.</h4>
-                    <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
-                        <li>Architected backend infrastructure supporting high-traffic corporate portals.</li>
-                        <li>Automated redundant workflows using GenAI LLM integrations and adversarial pipelines.</li>
-                        <li>Upgraded legacy styling systems to modern glassmorphism UI/UX paradigms.</li>
+                    <h3>Motion Granted</h3>
+                    <h4>Technical Co-Founder · Baton Rouge, LA</h4>
+                    <ul>
+                        <li>Building a PostgreSQL legal citation database that classifies how U.S. court opinions treat the cases they cite, the same job Westlaw KeyCite does. Loaded 9M+ opinions from CourtListener bulk data and classify treatment with a tiered LLM pipeline.</li>
+                        <li>Built the company's first product, an AI motion-drafting web app for small law firms (Next.js, TypeScript, Supabase, Stripe, Vercel), then shelved it once it was clear the data was the real business.</li>
+                        <li>Build everything by directing AI coding agents (Claude Code, Codex). I turn my attorney co-founder's legal requirements into written specs, test what comes back, and own deploys, CI, and permissions.</li>
                     </ul>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 4rem;">
-                <a href="mailto:ptann@example.com" class="btn btn-primary">Contact for Opportunities</a>
+
+            <!-- Experience 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot company-logo" aria-hidden="true">TLC</div>
+                <div class="timeline-date">2022 – Present</div>
+                <div class="glass-card">
+                    <h3>Tanner Lawn Care</h3>
+                    <h4>Owner · Baton Rouge, LA</h4>
+                    <ul>
+                        <li>Started it at 16 and still run it around a full class schedule, with about 15 recurring clients. Quotes, scheduling, invoicing, and client texts all run through Google Sheets and Calendar.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot company-logo" aria-hidden="true">C225</div>
+                <div class="timeline-date">2023 – 2025</div>
+                <div class="glass-card">
+                    <h3>Clean 225 Pressure Washing</h3>
+                    <h4>Owner · Baton Rouge, LA</h4>
+                    <ul>
+                        <li>Started it at 17 and ran it for two years: quoted jobs, bought and maintained the equipment, and handled every customer myself. Sold it in 2025.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-cta">
+                <a href="mailto:ptanne6@lsu.edu" class="btn btn-primary">Contact for Opportunities</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Porter Tanner. Built with premium design standards.</p>
+        <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
 </body>
 </html>
