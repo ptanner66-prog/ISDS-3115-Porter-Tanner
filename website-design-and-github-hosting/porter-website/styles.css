@@ -593,6 +593,47 @@ section + section {
     cursor: pointer;
 }
 
+/* Home lab card: server faceplates stacked between rack rails */
+.project-image--rack {
+    background: #050506;
+    padding: 0.75rem 0;
+}
+
+.rack {
+    position: relative;
+    width: 100%;
+    padding: 6px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: #0b0b0d;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+}
+
+.rack::before,
+.rack::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background:
+        radial-gradient(circle, #000 1.6px, transparent 2px) center / 12px 9px repeat-y,
+        linear-gradient(90deg, #2b2b30, #3a3a40 50%, #2b2b30);
+}
+
+.rack::before { left: 2px; }
+.rack::after { right: 2px; }
+
+.project-image .rack img {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+    filter: none;
+    box-shadow: 0 1px 0 #000;
+}
+
 .panel-mono {
     font-family: var(--font-mono);
     font-size: 0.75rem;
