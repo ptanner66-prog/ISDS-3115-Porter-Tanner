@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projects by Porter Tanner: the Motion Granted citation database, an open-source to-do list for AI coding agents, and a home-lab server.">
+    <meta property="og:title" content="Projects | Porter Tanner">
+    <meta property="og:description" content="Data systems, tools for AI agents, and server hardware projects by Porter Tanner.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="graphics/motion_granted.png">
     <title>Projects | Porter Tanner</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='.5' y='.5' width='31' height='31' fill='none' stroke='%233a3a3a'/%3E%3Ctext x='16' y='20.5' font-family='monospace' font-size='12' fill='%23ededed' text-anchor='middle'%3EPT%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar" id="main-nav">
+    <nav class="navbar" id="main-nav" aria-label="Primary navigation">
         <a href="index.html" class="logo">Porter Tanner</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -20,8 +24,8 @@
 
     <main class="container">
         <div class="resume-header">
-            <h1 class="section-title">Featured <span class="text-gradient">Work</span></h1>
-            <p>Data systems, tools for AI agents, and the hardware they run on.</p>
+            <h1 class="section-title">Featured <span class="text-gradient">Projects</span></h1>
+            <p>Production data pipelines, developer tools, and self-hosted server infrastructure.</p>
         </div>
 
         <div class="grid-3">
@@ -58,12 +62,10 @@
 
             <!-- Project 3 -->
             <div class="glass-card" id="project-3">
-                <div class="project-image project-image--rack">
-                    <div class="rack">
-                        <img src="graphics/r740xd.png" width="974" height="180" alt="Dell EMC PowerEdge R740xd server front panel">
-                        <img src="graphics/r740xd.png" width="974" height="180" alt="">
-                        <img src="graphics/r740xd.png" width="974" height="180" alt="">
-                    </div>
+                <div class="project-image project-image--server">
+                    <button type="button" class="zoom-hit" data-zoom="graphics/r740xd.png" aria-label="View full-size server photo">
+                        <img src="graphics/r740xd.png" alt="Dell EMC PowerEdge R740xd 80 TB server front panel" width="974" height="180">
+                    </button>
                 </div>
                 <h3>Home Lab Server</h3>
                 <p>An 80 TB dual-Xeon Dell R740xd that came locked down by another company. I cleared the lockout, installed Ubuntu, and made it the citation database host with PostgreSQL, scheduled backups, and a UPS. I also wrote a dashboard that shows CPU, memory, and pipeline status from my phone over Tailscale.</p>
@@ -77,7 +79,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
+        <p>&copy; 2026 Porter Tanner · Baton Rouge, LA · <a href="https://www.linkedin.com/in/porter-tanner-4b8267359" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://app.joinhandshake.com/profiles/met9rd" target="_blank" rel="noopener">Handshake</a> · <a href="https://github.com/ptanner66-prog" target="_blank" rel="noopener">GitHub</a> · <a href="Porter_Tanner_Resume.pdf" download>Resume (PDF)</a></p>
     </footer>
 
     <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
