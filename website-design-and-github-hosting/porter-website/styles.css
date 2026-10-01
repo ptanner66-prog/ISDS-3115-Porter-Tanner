@@ -593,45 +593,38 @@ section + section {
     cursor: pointer;
 }
 
-/* Home lab card: server faceplates stacked between rack rails */
-.project-image--rack {
-    background: #050506;
-    padding: 0.75rem 0;
-}
-
-.rack {
-    position: relative;
-    width: 100%;
-    padding: 6px 16px;
+/* Home lab card: server faceplate cleanly fitted inside box */
+.project-image--server {
+    padding: 0;
+    background: #08080c;
+    border-color: #22222a;
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-    background: #0b0b0d;
-    border-top: 1px solid var(--rule-strong);
-    border-bottom: 1px solid var(--rule-strong);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.rack::before,
-.rack::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 12px;
-    background:
-        radial-gradient(circle, #000 1.6px, transparent 2px) center / 12px 9px repeat-y,
-        linear-gradient(90deg, #2b2b30, #3a3a40 50%, #2b2b30);
+.project-image--server .zoom-hit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem 1rem;
 }
 
-.rack::before { left: 2px; }
-.rack::after { right: 2px; }
-
-.project-image .rack img {
+.project-image--server img {
     width: 100%;
     height: auto;
-    object-fit: initial;
-    filter: none;
-    box-shadow: 0 1px 0 #000;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+    border: 1px solid #1f2129;
+}
+
+.project-image--server:hover {
+    border-color: var(--accent);
 }
 
 .panel-mono {
