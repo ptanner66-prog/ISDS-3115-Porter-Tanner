@@ -184,12 +184,12 @@ section + section {
     margin-bottom: 1.5rem;
 }
 
-/* Breaks after "founder," and after "State"; the divisors are those
-   line widths in em, plus a little slack */
+/* Breaks after "Founder," and after "State"; the bold divisor is that line's
+   width in em plus a little slack, and the mono line is set a touch smaller */
 .hero-title-lead {
     display: block;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-size: min(calc(100cqi / 6.75), 5rem);
+    font-size: clamp(2.5rem, 4.9vw, 4.375rem);
+    font-size: min(calc(100cqi / 6.9), 5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 0.95;
@@ -197,21 +197,33 @@ section + section {
 
 .hero-title .text-gradient {
     display: block;
-    font-size: clamp(1.5rem, 3.2vw, 2.875rem);
-    font-size: min(calc(100cqi / 10.6), 3.25rem);
+    font-size: clamp(1.375rem, 2.9vw, 2.625rem);
+    font-size: min(calc(100cqi / 11.6), 3rem);
     line-height: 1.2;
     margin-top: 0.2em;
+    text-decoration: none;
+}
+
+/* Accent the ampersand and underline only the university name */
+.hero-title-amp {
+    color: var(--accent);
+}
+
+.hero-title-uni {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
     text-decoration-thickness: max(1px, 0.04em);
+    text-underline-offset: 0.18em;
 }
 
 /* Wide column (stacked layout on tablets): each part fits on one line */
 @container (min-width: 600px) {
     .hero-title-lead {
-        font-size: min(calc(100cqi / 10.9), 5rem);
+        font-size: min(calc(100cqi / 11.15), 5rem);
     }
 
     .hero-title .text-gradient {
-        font-size: min(calc(100cqi / 17.6), 3.25rem);
+        font-size: min(calc(100cqi / 19.25), 3rem);
     }
 }
 
@@ -237,8 +249,9 @@ section + section {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: 30% 50%;
     border: 1px solid var(--rule);
 }
 
