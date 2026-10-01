@@ -593,37 +593,76 @@ section + section {
     cursor: pointer;
 }
 
-/* Home lab card: server faceplate cleanly fitted inside box */
-.project-image--server {
+/* Home lab card: 200px server rack cabinet housing 3 stacked Dell R740xd servers */
+.project-image--rack {
+    height: 200px;
     padding: 0;
-    background: #08080c;
-    border-color: #22222a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #08090d;
+    border: 1px solid var(--rule);
+    margin-bottom: 1.5rem;
     overflow: hidden;
+    display: flex;
 }
 
-.project-image--server .zoom-hit {
+.project-image--rack .zoom-hit {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 1.25rem 1rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
 }
 
-.project-image--server img {
+.rack-cabinet {
+    position: relative;
     width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
-    border: 1px solid #1f2129;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #080a0f;
+    padding: 0 12px;
 }
 
-.project-image--server:hover {
+/* Realistic steel rack rails on left and right with mounting holes */
+.rack-cabinet::before,
+.rack-cabinet::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background:
+        radial-gradient(circle, #050608 1.6px, transparent 2px) center / 12px 8px repeat-y,
+        linear-gradient(90deg, #1e222b, #303744 50%, #1e222b);
+    z-index: 2;
+}
+.rack-cabinet::before { left: 0; }
+.rack-cabinet::after { right: 0; }
+
+.rack-servers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    gap: 2px;
+    padding: 2px 0;
+    z-index: 1;
+}
+
+.rack-servers img {
+    width: 100%;
+    height: calc(25% - 2px);
+    object-fit: fill;
+    display: block;
+    border: 1px solid #1a1e28;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.project-image--rack:hover {
     border-color: var(--accent);
 }
 
