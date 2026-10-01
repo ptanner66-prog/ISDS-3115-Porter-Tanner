@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Porter Tanner's technical projects and portfolio.">
+    <meta name="description" content="Projects by Porter Tanner: the Motion Granted citation database, an open-source to-do list for AI coding agents, and a home-lab server.">
     <title>Projects | Porter Tanner</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='.5' y='.5' width='31' height='31' fill='none' stroke='%233a3a3a'/%3E%3Ctext x='16' y='20.5' font-family='monospace' font-size='12' fill='%23ededed' text-anchor='middle'%3EPT%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar" id="main-nav">
-        <div class="logo">Porter <span class="text-gradient">Tanner</span></div>
+        <a href="index.html" class="logo">Porter Tanner</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
@@ -20,56 +21,81 @@
     <main class="container">
         <div class="resume-header">
             <h1 class="section-title">Featured <span class="text-gradient">Work</span></h1>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: -1.5rem auto 4rem;">Showcasing autonomous systems, web architecture, and robust engineering solutions.</p>
+            <p>Data systems, tools for AI agents, and the hardware they run on.</p>
         </div>
 
         <div class="grid-3">
             <!-- Project 1 -->
             <div class="glass-card" id="project-1">
-                <div class="project-image" style="background: linear-gradient(135deg, #0f172a, #1e293b); display: flex; align-items: center; justify-content: center; font-family: 'Outfit'; font-size: 2rem; color: rgba(255,255,255,0.1);">
-                    MG Shepardize
+                <div class="project-image project-image--mg">
+                    <img src="graphics/motion_granted.png" alt="Motion Granted logo" width="2460" height="804">
                 </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Legal Citation Agent</h3>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">An adversarial two-read GenAI protocol designed to autonomously verify citations against the CourtListener bulk corpus.</p>
+                <h3>Motion Granted Citation Database</h3>
+                <p>Classifies how U.S. court opinions treat the cases they cite, the same job Westlaw KeyCite does for lawyers. 9M+ opinions from CourtListener bulk data, citations extracted and classified by a tiered LLM pipeline. I wrote its front end, back end, and monitoring.</p>
                 <div class="project-tags">
-                    <span class="tag">Agentic AI</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">LLM Architecture</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">LLM pipeline</span>
+                    <span class="tag">Next.js</span>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="glass-card" id="project-2">
-                <div class="project-image" style="background: linear-gradient(135deg, #1e1b4b, #312e81); display: flex; align-items: center; justify-content: center; font-family: 'Outfit'; font-size: 2rem; color: rgba(255,255,255,0.1);">
-                    Crypto Arbitrage
+                <div class="project-image project-image--shot">
+                    <button type="button" class="zoom-hit" data-zoom="graphics/agentic-todo.png" aria-label="View full-size screenshot">
+                        <img src="graphics/agentic-todo.png" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons" width="571" height="712">
+                    </button>
                 </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Triangular Arbitrage Bot</h3>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">High-frequency trading bot analyzing intra-exchange spread inefficiencies. Containerized on Kubernetes.</p>
+                <h3>Agentic Operator To-Do List</h3>
+                <p>A native Linux app that lives in the Omarchy (Arch Linux) desktop bar and doubles as the inbox for AI coding agents. When an agent needs a decision, it shows up as an item with context and a recommendation, and you approve, reject, or reply from the same list as your own tasks. Open source on <a href="https://github.com/ptanner66-prog/agentic-operator-to-do-list" target="_blank" rel="noopener">GitHub</a>.</p>
                 <div class="project-tags">
-                    <span class="tag">FinTech</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Linux (Omarchy)</span>
+                    <span class="tag">Python + QML</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">MCP</span>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="glass-card" id="project-3">
-                <div class="project-image" style="background: linear-gradient(135deg, #022c22, #064e3b); display: flex; align-items: center; justify-content: center; font-family: 'Outfit'; font-size: 2rem; color: rgba(255,255,255,0.1);">
-                    Portfolio
+                <div class="project-image project-image--rack">
+                    <div class="rack">
+                        <img src="graphics/r740xd.png" width="974" height="180" alt="Dell EMC PowerEdge R740xd server front panel">
+                        <img src="graphics/r740xd.png" width="974" height="180" alt="">
+                        <img src="graphics/r740xd.png" width="974" height="180" alt="">
+                    </div>
                 </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Premium Scaffolding</h3>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">This website itself. Built with modern glassmorphism, dynamic gradients, and semantic HTML for optimal SEO.</p>
+                <h3>Home Lab Server</h3>
+                <p>An 80 TB dual-Xeon Dell R740xd that came locked down by another company. I cleared the lockout, installed Ubuntu, and made it the citation database host with PostgreSQL, scheduled backups, and a UPS. I also wrote a dashboard that shows CPU, memory, and pipeline status from my phone over Tailscale.</p>
                 <div class="project-tags">
-                    <span class="tag">Web Design</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">UI/UX</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Tailscale</span>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Porter Tanner. Built with premium design standards.</p>
+        <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <img src="" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons">
+        <button type="button" class="lightbox-close" aria-label="Close">Close ✕</button>
+    </dialog>
+
+    <script>
+        // Zoom: open project screenshots full-size in a native dialog
+        var box = document.getElementById('lightbox');
+        document.querySelectorAll('.zoom-hit').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                box.querySelector('img').src = btn.dataset.zoom;
+                box.showModal();
+            });
+        });
+        box.querySelector('.lightbox-close').addEventListener('click', function () { box.close(); });
+        box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+    </script>
 </body>
 </html>

@@ -1,57 +1,55 @@
-# ISDS 3100: Information Systems Foundations
+# Porter Tanner: Personal Website
 
-**E.J. OURSO COLLEGE OF BUSINESS**
-SDEIS DEPARTMENT
-Baton Rouge, LA 70803
+**Live site:** https://ptanner66-prog.github.io/ISDS-3115-Porter-Tanner/
+**Repository:** https://github.com/ptanner66-prog/ISDS-3115-Porter-Tanner
 
-**Instructor:** Gabriele Piccoli, Ph.D.
-**Student**Porter Tanner
-**Email:** ptanne6@lsu.edu
+ISDS 3100 (Fall 2026), AI Lab: Vibe Coding. Porter Tanner · ptanne6@lsu.edu · Instructor: Gabriele Piccoli, Ph.D.
 
----
+## What it is
+My personal website, built by directing an AI coding agent and hosted on GitHub Pages. It uses a hybrid layout:
 
-## Fall 2026 — AI Lab: Vibe Coding and Agent Skill Development
+| Page | File | What's on it |
+|---|---|---|
+| Home (single page) | `index.html` | Profile, skills, experience, contact |
+| Resume | `resume.html` | Education, ventures, earlier work, skills |
+| Projects | `project.html` | Motion Granted citation database, Agentic Operator To-Do List, home lab server |
+| Shared styling | `styles.css` | One stylesheet for all three pages |
 
-This repository contains the coursework for the Generative AI portion of ISDS 3100. The goal of this semester project is to practice managing and directing AI systems through a pair-programming approach. It is divided into two entirely separate semester projects.
+The site files live in [`website-design-and-github-hosting/porter-website/`](./website-design-and-github-hosting/porter-website/). Images are in `graphics/`. The root `index.html` redirects visitors to that folder so the GitHub Pages URL opens the site directly.
 
----
+It's plain HTML and CSS with a few lines of inline JavaScript (copy-email button, screenshot zoom), and it uses no website builder or backend.
 
-## Project 1: Website Design & GitHub Hosting
-**Location:** [`website-design-and-github-hosting/porter-website/`](./website-design-and-github-hosting/porter-website/)
+## Run it locally
+```bash
+cd website-design-and-github-hosting/porter-website
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-This project consists of creating a personal website using **Google's Antigravity IDE** in a pair-programming (Driver/Navigator) vibe coding modality. 
-* **Requirements:** 
-  * A hybrid layout (single-page for Profile, Skills, Experience, Contact; separate pages for Resume and Projects).
-  * Professional design targeted at recruiters.
-  * No website builders (Wix, Squarespace) or backend providers (Lovable, Supabase) are permitted.
-* **Deliverables:** A complete set of HTML/CSS/JS files (including `index.html`, `resume.html`, `project.html`, and `styles.css`) and a live website hosted via GitHub Pages or Cloudflare Pages.
-* **Grading:** Graded individually based on the developer's own personal website.
+## Reflection
 
-### Timeline:
-* **September 18th** – First Team Composition
-* **September 22nd** – AI Lab (Vibe Coding)
-* **October 2nd** – Vibe Coding project deadline
+<!--
+DIRECTIONS: delete this comment and write your reflection here, in your own words.
 
----
+The rubric (10% of the grade) wants ONE specific, insightful reflection:
+a concrete technical point plus a clear learning from directing the agent.
+Generic lines like "I learned a lot about AI" score 4-6/10. Aim for 3-6 sentences:
 
-## Project 2: Agent Skill Design & Deployment
-**Location:** [`agent-skill-design-and-deployment/`](./agent-skill-design-and-deployment/)
+  1. The moment: what you asked the agent for, and what came back wrong or surprising.
+  2. The technical why: what was actually going on (name the HTML/CSS/JS detail).
+  3. The learning: what you now do differently when you direct an agent.
 
-This project consists of creating and packaging a repeatable agent skill for Claude Code that automates expertise. 
-* **Requirements:** 
-  * The skill must be repeatable, useful to a defined user, and appropriately scoped (doing one thing well).
-* **Deliverables:** 
-  * A well-formed `SKILL.md` (with precise YAML frontmatter and step-by-step instructions).
-  * Supporting resources (such as `assets/`, `references/`, or `scripts/`) bundled in the `.claude/skills/` directory.
-  * Demonstrated reliability across at least two separate test runs.
-* **Grading:** Graded as a team; the team produces one shared artifact and receives a single grade.
-
-### Timeline:
-* **October 7th** – Second Team Composition
-* **October 13th** – AI Lab (Agent Skill development)
-* **November 5th** – AI Lab (Agent Skill development)
-* **November 13th** – Agent Skill development project deadline
+Real moments from this build you could pick from (use one, and tell it your way):
+  - The "Contact" button used a mailto: link, which does nothing on computers with no
+    default mail app, so we added a copy-email button as a fallback.
+  - The Motion Granted logo would not grow inside its badge because the <img> had a
+    fixed width="32" attribute in the HTML; the CSS change alone did nothing.
+  - The first design the agent produced (purple glassmorphism) looked like every
+    other AI-made site; you had to specify "sleek black" and reject the generic output.
+  - Phone view: the original scaffold hid the nav entirely under 768px
+    (display: none), so phone visitors could not navigate at all.
+-->
 
 ---
 
-> **Note to Instructors/Graders:** Each project directory contains its own specific instructions and deliverables. Please navigate to the respective folder for detailed project materials.
+*The agent skill project for the second half of the course is in [`agent-skill-design-and-deployment/`](./agent-skill-design-and-deployment/).*
