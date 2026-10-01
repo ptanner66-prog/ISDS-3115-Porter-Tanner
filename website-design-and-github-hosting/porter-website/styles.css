@@ -204,9 +204,12 @@ section + section {
     text-decoration: none;
 }
 
-/* Accent the ampersand and underline only the university name */
+/* Accent the ampersand and underline only the university name. The &
+   glyph is about a quarter wider than the capitals, so it is set smaller
+   to keep it from reading bigger than the S beside it */
 .hero-title-amp {
     color: var(--accent);
+    font-size: 0.8em;
 }
 
 .hero-title-uni {
