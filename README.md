@@ -37,6 +37,3 @@ Since this project, I have migrated my workflow over to VS code and is my go to 
 and combine it with the control aspect that i veered away from to create a dev workflow that allows agents to work at frontier level while also keeping control
 of my repo in my hands.
 
----
-
-*The agent skill project for the second half of the course is in [`agent-skill-design-and-deployment/`](./agent-skill-design-and-deployment/).*
