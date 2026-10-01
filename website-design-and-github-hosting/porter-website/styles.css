@@ -165,26 +165,31 @@ section + section {
     margin-top: 6rem;
 }
 
-/* Hero Section: a full-width headline sized to the container, then intro + photo */
+/* Hero Section */
 .hero-section {
-    container-type: inline-size;
+    min-height: calc(80vh - 64px);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
     column-gap: 3.5rem;
 }
 
-.hero-title {
-    grid-column: 1 / -1;
-    margin-bottom: 3.5rem;
+/* The text column is a size container, so the headline is sized off its
+   width (cqi) and fills the column without spilling toward the photo */
+.hero-text {
+    container-type: inline-size;
 }
 
-/* Each line is sized off the container width (cqi) so it runs edge to edge
-   without wrapping; the divisors are the line widths in em, plus a little slack */
+.hero-title {
+    margin-bottom: 1.5rem;
+}
+
+/* Breaks after "founder," and after "State"; the divisors are those
+   line widths in em, plus a little slack */
 .hero-title-lead {
     display: block;
-    font-size: clamp(2.5rem, 7.5vw, 6rem);
-    font-size: min(calc(100cqi / 10.9), 6.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: min(calc(100cqi / 6.75), 5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 0.95;
@@ -192,15 +197,26 @@ section + section {
 
 .hero-title .text-gradient {
     display: block;
-    font-size: clamp(1.5rem, 4.6vw, 3.75rem);
-    font-size: min(calc(100cqi / 17.6), 4rem);
+    font-size: clamp(1.5rem, 3.2vw, 2.875rem);
+    font-size: min(calc(100cqi / 10.6), 3.25rem);
     line-height: 1.2;
     margin-top: 0.2em;
     text-decoration-thickness: max(1px, 0.04em);
 }
 
+/* Wide column (stacked layout on tablets): each part fits on one line */
+@container (min-width: 600px) {
+    .hero-title-lead {
+        font-size: min(calc(100cqi / 10.9), 5rem);
+    }
+
+    .hero-title .text-gradient {
+        font-size: min(calc(100cqi / 17.6), 3.25rem);
+    }
+}
+
 .hero-section p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 2.5rem;
@@ -713,16 +729,14 @@ footer {
 /* Responsive */
 @media (max-width: 860px) {
     .hero-section {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
+        min-height: 0;
         padding-top: 1rem;
     }
 
-    .hero-title {
-        margin-bottom: 2.5rem;
-    }
-
     .hero-photo {
-        margin-top: 3rem;
+        order: -1;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -760,7 +774,7 @@ footer {
     }
 
     .hero-section p {
-        font-size: 1.0625rem;
+        font-size: 1rem;
     }
 
     section + section {
@@ -803,26 +817,6 @@ footer {
 
     footer {
         padding: 2rem 1rem;
-    }
-}
-
-/* Phones: one line would be too small, so the headline breaks after
-   "founder," and the mono line after "State", each sized to fill the width */
-@media (max-width: 600px) {
-    .hero-title-lead {
-        font-size: min(calc(100cqi / 6.75), 5rem);
-    }
-
-    .hero-title .text-gradient {
-        font-size: min(calc(100cqi / 10.6), 3.25rem);
-    }
-
-    .hero-title {
-        margin-bottom: 2rem;
-    }
-
-    .hero-section p {
-        margin-bottom: 2rem;
     }
 }
 
