@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Fragment+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Fragment+Mono&display=swap');
 
 :root {
     --bg-main: #000000;
@@ -165,26 +165,46 @@ section + section {
     margin-top: 6rem;
 }
 
-/* Hero Section */
+/* Hero Section: a full-width headline sized to the container, then intro + photo */
 .hero-section {
-    min-height: calc(80vh - 64px);
+    container-type: inline-size;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: start;
     column-gap: 3.5rem;
 }
 
-.hero-section h1 {
-    font-size: clamp(2.25rem, 3.6vw, 2.75rem);
-    line-height: 1.05;
-    margin-bottom: 1.5rem;
+.hero-title {
+    grid-column: 1 / -1;
+    margin-bottom: 3.5rem;
+}
+
+/* Each line is sized off the container width (cqi) so it runs edge to edge
+   without wrapping; the divisors are the line widths in em, plus a little slack */
+.hero-title-lead {
+    display: block;
+    font-size: clamp(2.5rem, 7.5vw, 6rem);
+    font-size: min(calc(100cqi / 10.9), 6.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.hero-title .text-gradient {
+    display: block;
+    font-size: clamp(1.5rem, 4.6vw, 3.75rem);
+    font-size: min(calc(100cqi / 17.6), 4rem);
+    line-height: 1.2;
+    margin-top: 0.2em;
+    text-decoration-thickness: max(1px, 0.04em);
 }
 
 .hero-section p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 2.5rem;
+    text-wrap: pretty;
 }
 
 .hero-actions {
@@ -211,6 +231,11 @@ section + section {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--text-muted);
+    text-wrap: balance;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 /* Buttons */
@@ -688,14 +713,16 @@ footer {
 /* Responsive */
 @media (max-width: 860px) {
     .hero-section {
-        grid-template-columns: 1fr;
-        min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
         padding-top: 1rem;
     }
 
-    .hero-photo {
-        order: -1;
+    .hero-title {
         margin-bottom: 2.5rem;
+    }
+
+    .hero-photo {
+        margin-top: 3rem;
     }
 }
 
@@ -725,7 +752,6 @@ footer {
         padding: 96px 1rem 3rem;
     }
 
-    .hero-section h1,
     .resume-header .section-title {
         font-size: 2rem;
         line-height: 1.1;
@@ -734,7 +760,7 @@ footer {
     }
 
     .hero-section p {
-        font-size: 1rem;
+        font-size: 1.0625rem;
     }
 
     section + section {
@@ -780,6 +806,26 @@ footer {
     }
 }
 
+/* Phones: one line would be too small, so the headline breaks after
+   "founder," and the mono line after "State", each sized to fill the width */
+@media (max-width: 600px) {
+    .hero-title-lead {
+        font-size: min(calc(100cqi / 6.75), 5rem);
+    }
+
+    .hero-title .text-gradient {
+        font-size: min(calc(100cqi / 10.6), 3.25rem);
+    }
+
+    .hero-title {
+        margin-bottom: 2rem;
+    }
+
+    .hero-section p {
+        margin-bottom: 2rem;
+    }
+}
+
 @media (max-width: 480px) {
     .navbar {
         padding: 0 0.75rem;
@@ -801,7 +847,6 @@ footer {
         padding: 84px 0.75rem 2.5rem;
     }
 
-    .hero-section h1,
     .resume-header .section-title {
         font-size: 1.625rem;
     }
