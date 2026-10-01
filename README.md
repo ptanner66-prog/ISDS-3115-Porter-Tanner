@@ -27,28 +27,15 @@ python3 -m http.server 8000
 ```
 
 ## Reflection
-
-<!--
-DIRECTIONS: delete this comment and write your reflection here, in your own words.
-
-The rubric (10% of the grade) wants ONE specific, insightful reflection:
-a concrete technical point plus a clear learning from directing the agent.
-Generic lines like "I learned a lot about AI" score 4-6/10. Aim for 3-6 sentences:
-
-  1. The moment: what you asked the agent for, and what came back wrong or surprising.
-  2. The technical why: what was actually going on (name the HTML/CSS/JS detail).
-  3. The learning: what you now do differently when you direct an agent.
-
-Real moments from this build you could pick from (use one, and tell it your way):
-  - The "Contact" button used a mailto: link, which does nothing on computers with no
-    default mail app, so we added a copy-email button as a fallback.
-  - The Motion Granted logo would not grow inside its badge because the <img> had a
-    fixed width="32" attribute in the HTML; the CSS change alone did nothing.
-  - The first design the agent produced (purple glassmorphism) looked like every
-    other AI-made site; you had to specify "sleek black" and reject the generic output.
-  - Phone view: the original scaffold hid the nav entirely under 768px
-    (display: none), so phone visitors could not navigate at all.
--->
+I spent my entire summer vibecoding with different tools and moved away from the IDE months ago after i learned the basics 
+and models got more capable. Going into this seemed like a walk in the park for me but that was not the case which taught 
+me even more about coding with LLMs. Since leaving the IDE I didn't realize how lazy I had become allowing agents to do almost
+everything for me. I got so caught up in the multi agent harnesses and optimizing my workflow that I lost control of my codebase. 
+Using an IDE for the first time in a while helped me realize that no matter how good the coding agent is, I still must keep total control
+of my agents. I learned that I had little control and understanding of my code when using claude code desktop app or something or that nature.
+Since this project, I have migrated my workflow over to VS code and is my go to dev space now. I was able to take what i learned with multi agent orchestration 
+and combine it with the control aspect that i veered away from to create a dev workflow that allows agents to work at frontier level while also keeping control
+of my repo in my hands.
 
 ---
 
