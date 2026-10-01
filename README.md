@@ -3,21 +3,7 @@
 **Live site:** https://ptanner66-prog.github.io/ISDS-3115-Porter-Tanner/
 **Repository:** https://github.com/ptanner66-prog/ISDS-3115-Porter-Tanner
 
-ISDS 3100 (Fall 2026), AI Lab: Vibe Coding. Porter Tanner · ptanne6@lsu.edu · Instructor: Gabriele Piccoli, Ph.D.
-
-## What it is
-My personal website, built by directing an AI coding agent and hosted on GitHub Pages. It uses a hybrid layout:
-
-| Page | File | What's on it |
-|---|---|---|
-| Home (single page) | `index.html` | Profile, skills, experience, contact |
-| Resume | `resume.html` | Education, ventures, earlier work, skills |
-| Projects | `project.html` | Motion Granted citation database, Agentic Operator To-Do List, home lab server |
-| Shared styling | `styles.css` | One stylesheet for all three pages |
-
-The site files live in [`website-design-and-github-hosting/porter-website/`](./website-design-and-github-hosting/porter-website/). Images are in `graphics/`. The root `index.html` redirects visitors to that folder so the GitHub Pages URL opens the site directly.
-
-It's plain HTML and CSS with a few lines of inline JavaScript (copy-email button, screenshot zoom), and it uses no website builder or backend.
+My personal portfolio website, built with HTML, CSS, and minimal vanilla JavaScript.
 
 ## Run it locally
 ```bash
