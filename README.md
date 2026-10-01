@@ -1,6 +1,7 @@
 # Porter Tanner: Personal Website
 
-**Live site:** https://ptanner66-prog.github.io/ISDS-3115-Porter-Tanner/
+**Live site:** https://ptanner66-prog.github.io/ISDS-3115-Porter-Tanner
+
 **Repository:** https://github.com/ptanner66-prog/ISDS-3115-Porter-Tanner
 
 My personal portfolio website, built with HTML, CSS, and minimal vanilla JavaScript.
@@ -19,7 +20,5 @@ me even more about coding with LLMs. Since leaving the IDE I didn't realize how 
 everything for me. I got so caught up in the multi agent harnesses and optimizing my workflow that I lost control of my codebase. 
 Using an IDE for the first time in a while helped me realize that no matter how good the coding agent is, I still must keep total control
 of my agents. I learned that I had little control and understanding of my code when using claude code desktop app or something or that nature.
-Since this project, I have migrated my workflow over to VS code and is my go to dev space now. I was able to take what i learned with multi agent orchestration 
-and combine it with the control aspect that i veered away from to create a dev workflow that allows agents to work at frontier level while also keeping control
-of my repo in my hands.
+Since this project, I have migrated my workflow over to VS code and is my go to dev space now. I was able to take what i learned with multi agent orchestration and combine it with the control aspect that i veered away from to create a dev workflow that allows agents to work at frontier level while also keeping control of my repo in my hands.
 
