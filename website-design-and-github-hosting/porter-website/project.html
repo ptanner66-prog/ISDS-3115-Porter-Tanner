@@ -35,7 +35,7 @@
                     <img src="graphics/motion_granted.png" alt="Motion Granted logo" width="2460" height="804">
                 </div>
                 <h3>Motion Granted Citation Database</h3>
-                <p>Classifies how U.S. court opinions treat the cases they cite, the same job Westlaw KeyCite does for lawyers. 9M+ opinions from CourtListener bulk data, citations extracted and classified by a tiered LLM pipeline. I wrote its front end, back end, and monitoring. Live at <a href="https://motion-granted.com" target="_blank" rel="noopener">motion-granted.com</a>.</p>
+                <p>Classifies how U.S. court opinions treat the cases they cite, the same job Westlaw KeyCite does for lawyers. 9M+ opinions from CourtListener bulk data, citations extracted and classified by a tiered LLM pipeline. I wrote its front end, back end, and monitoring.</p>
                 <div class="project-tags">
                     <span class="tag">PostgreSQL</span>
                     <span class="tag">LLM pipeline</span>
@@ -46,7 +46,7 @@
             <!-- Project 2 -->
             <div class="glass-card" id="project-2">
                 <div class="project-image project-image--shot">
-                    <button type="button" class="zoom-hit" data-zoom="graphics/agentic-todo.png" aria-label="View full-size screenshot">
+                    <button type="button" class="zoom-hit" data-zoom="graphics/agentic-todo.png" data-alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons" aria-label="View full-size screenshot">
                         <img src="graphics/agentic-todo.png" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons" width="571" height="712">
                     </button>
                 </div>
@@ -63,7 +63,7 @@
             <!-- Project 3 -->
             <div class="glass-card" id="project-3">
                 <div class="project-image project-image--rack">
-                    <button type="button" class="zoom-hit" data-zoom="graphics/r740xd.png" aria-label="View full-size server photo">
+                    <button type="button" class="zoom-hit" data-zoom="graphics/r740xd.png" data-alt="Dell EMC PowerEdge R740xd server front panel" aria-label="View full-size server photo">
                         <div class="rack-cabinet">
                             <div class="rack-servers">
                                 <img src="graphics/r740xd.png" alt="Dell EMC PowerEdge R740xd server front panel - node 1" width="974" height="180">
@@ -89,17 +89,20 @@
         <p>&copy; 2026 Porter Tanner · Baton Rouge, LA</p>
     </footer>
 
-    <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
-        <img src="" alt="Agentic Operator To-Do List panel showing an agent request with context, recommendation, and approve or reject buttons">
+    <dialog class="lightbox" id="lightbox" aria-label="Image preview">
+        <img src="" alt="">
         <button type="button" class="lightbox-close" aria-label="Close">Close ✕</button>
     </dialog>
 
     <script>
         // Zoom: open project screenshots full-size in a native dialog
         var box = document.getElementById('lightbox');
+        var lightboxImg = box.querySelector('img');
         document.querySelectorAll('.zoom-hit').forEach(function (btn) {
             btn.addEventListener('click', function () {
-                box.querySelector('img').src = btn.dataset.zoom;
+                lightboxImg.src = btn.dataset.zoom;
+                var altText = btn.dataset.alt || (btn.querySelector('img') ? btn.querySelector('img').alt : '');
+                lightboxImg.alt = altText;
                 box.showModal();
             });
         });
