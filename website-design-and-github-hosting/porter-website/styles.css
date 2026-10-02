@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Fragment+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Fragment+Mono&display=swap');
 
 :root {
     --bg-main: #000000;
@@ -174,10 +174,60 @@ section + section {
     column-gap: 3.5rem;
 }
 
-.hero-section h1 {
-    font-size: clamp(2.25rem, 3.6vw, 2.75rem);
-    line-height: 1.05;
+/* The text column is a size container, so the headline is sized off its
+   width (cqi) and fills the column without spilling toward the photo */
+.hero-text {
+    container-type: inline-size;
+}
+
+.hero-title {
     margin-bottom: 1.5rem;
+}
+
+/* Breaks after "Founder," and after "State"; the bold divisor is that line's
+   width in em plus a little slack, and the mono line is set a touch smaller */
+.hero-title-lead {
+    display: block;
+    font-size: clamp(2.5rem, 4.9vw, 4.375rem);
+    font-size: min(calc(100cqi / 6.9), 5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.hero-title .text-gradient {
+    display: block;
+    font-size: clamp(1.375rem, 2.9vw, 2.625rem);
+    font-size: min(calc(100cqi / 11.6), 3rem);
+    line-height: 1.2;
+    margin-top: 0.2em;
+    text-decoration: none;
+}
+
+/* Accent the ampersand and underline only the university name. The &
+   glyph is about a quarter wider than the capitals, so it is set smaller
+   to keep it from reading bigger than the S beside it */
+.hero-title-amp {
+    color: var(--accent);
+    font-size: 0.8em;
+}
+
+.hero-title-uni {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: max(1px, 0.04em);
+    text-underline-offset: 0.18em;
+}
+
+/* Wide column (stacked layout on tablets): each part fits on one line */
+@container (min-width: 600px) {
+    .hero-title-lead {
+        font-size: min(calc(100cqi / 11.15), 5rem);
+    }
+
+    .hero-title .text-gradient {
+        font-size: min(calc(100cqi / 19.25), 3rem);
+    }
 }
 
 .hero-section p {
@@ -185,6 +235,7 @@ section + section {
     color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 2.5rem;
+    text-wrap: pretty;
 }
 
 .hero-actions {
@@ -201,8 +252,9 @@ section + section {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: 30% 50%;
     border: 1px solid var(--rule);
 }
 
@@ -211,6 +263,11 @@ section + section {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--text-muted);
+    text-wrap: balance;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 /* Buttons */
@@ -764,7 +821,6 @@ footer {
         padding: 96px 1rem 3rem;
     }
 
-    .hero-section h1,
     .resume-header .section-title {
         font-size: 2rem;
         line-height: 1.1;
@@ -840,7 +896,6 @@ footer {
         padding: 84px 0.75rem 2.5rem;
     }
 
-    .hero-section h1,
     .resume-header .section-title {
         font-size: 1.625rem;
     }
