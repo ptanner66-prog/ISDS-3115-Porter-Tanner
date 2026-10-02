@@ -4,6 +4,7 @@
 
 **Repository:** https://github.com/ptanner66-prog/ISDS-3115-Porter-Tanner
 
+This repository contains the source code for my personal portfolio website built for ISDS 3115 at Louisiana State University. Developed with semantic HTML5, modern vanilla CSS, and lightweight JavaScript, the site showcases my background in economics and information systems, legal data engineering work at Motion Granted, self-hosted homelab infrastructure, and professional resume.
 
 ## Reflection
 I spent my entire summer vibecoding with different tools and moved away from the IDE months ago after i learned the basics 
